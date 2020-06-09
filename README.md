@@ -22,44 +22,46 @@ We recommend you follow the order of execution as it is presented bellow;
 All commands should be execute from <i><project-root-directory></i>
 </p>
 
-<p>###Config</p>
+
+### Config
+
 
 ````bash
 cd /config
 mvn clean install -DskipTests
 java -jar ./target/config.jar
 ````
-<p>###Registry</p>
+### Registry
 
 ````bash
-cd /config
+cd /registry
 mvn clean install -DskipTests
 java -jar -Dspring.profiles.active=dev ./target/registry.jar
 ````
-<p>###Gateway</p>
+### Gateway
 
 ````bash
-cd /config
+cd /gateway
 mvn clean install -DskipTests
 java -jar -Dspring.profiles.active=dev ./target/gateway.jar
 ````
 
-<p>###Auth</p>
+### Auth 
 
 ````bash
-cd /config
+cd /auth
 mvn clean install -DskipTests
 java -jar -Dspring.profiles.active=dev ./target/authorization-server.jar
 ````
-<p>###Customer mock</p>
+### Customer mock
 
 ````bash
-cd /config
+cd /customer
 mvn clean install -DskipTests
 java -jar -Dspring.profiles.active=dev ./target/customer.jar
 ````
 
-##Testing with CURL
+### Testing with CURL
 
 Getting the token:
 
