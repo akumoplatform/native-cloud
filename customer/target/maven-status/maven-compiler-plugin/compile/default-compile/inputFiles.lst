@@ -1,0 +1,10 @@
+/Users/alissonpedrina/Documents/akumoplatform/native-cloud/customer/src/main/java/com/akumo/customer/config/SwaggerConfig.java
+/Users/alissonpedrina/Documents/akumoplatform/native-cloud/customer/src/main/java/com/akumo/customer/jwt/JwtTokenUtil.java
+/Users/alissonpedrina/Documents/akumoplatform/native-cloud/customer/src/main/java/com/akumo/customer/jwt/JwtRequestFilter.java
+/Users/alissonpedrina/Documents/akumoplatform/native-cloud/customer/src/main/java/com/akumo/customer/controller/CustomerController.java
+/Users/alissonpedrina/Documents/akumoplatform/native-cloud/customer/src/main/java/com/akumo/customer/jwt/JwtUserDetailsService.java
+/Users/alissonpedrina/Documents/akumoplatform/native-cloud/customer/src/main/java/com/akumo/customer/config/WebConfig.java
+/Users/alissonpedrina/Documents/akumoplatform/native-cloud/customer/src/main/java/com/akumo/customer/AuthorizationServerApplication.java
+/Users/alissonpedrina/Documents/akumoplatform/native-cloud/customer/src/main/java/com/akumo/customer/config/CorsFilter.java
+/Users/alissonpedrina/Documents/akumoplatform/native-cloud/customer/src/main/java/com/akumo/customer/jwt/JwtAuthenticationEntryPoint.java
+/Users/alissonpedrina/Documents/akumoplatform/native-cloud/customer/src/main/java/com/akumo/customer/config/WebSecurityConfig.java

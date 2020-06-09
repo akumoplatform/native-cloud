@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="authorization-server">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/auth/target/authorization-server.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
