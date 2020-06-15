@@ -1,3 +1,5 @@
+jwt:
+  secret: akumo
 #SPRING
 spring:
   application:
@@ -45,7 +47,6 @@ zuul:
       sensitiveHeaders:
     auth:
       path: /auth/**
-      serviceId: auth
       stripPrefix: false
       sensitiveHeaders:
     customer:

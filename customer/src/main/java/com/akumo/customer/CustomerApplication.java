@@ -12,11 +12,11 @@ import java.io.File;
 @EnableEurekaClient
 @EnableDiscoveryClient
 @SpringBootApplication(scanBasePackages = "com.akumo.customer")
-public class AuthorizationServerApplication extends SpringBootServletInitializer {
+public class CustomerApplication extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
         System.setProperty("keystore", System.getProperty("user.dir") + File.separator + "focare.p12");
-        SpringApplication.run(AuthorizationServerApplication.class, args);
+        SpringApplication.run(CustomerApplication.class, args);
 
     }
 
