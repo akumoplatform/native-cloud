@@ -1,0 +1,65 @@
+server:
+  contextPath: /user
+  port: 1212
+spring:
+  cloud:
+    config:
+      failFast: true
+      uri: http://config:8888
+      username: admin
+      password: admin
+      retry:
+        initialInterval: 12000
+        maxInterval: 12000
+        maxAttempts: 30
+  application:
+    name: userservice
+  security:
+    oauth2:
+      client:
+        client-id: userBuildClientIdPassword
+        client-secret: secret
+        access-token-uri: https://oauth:9977/oauth-server/oauth/token
+        user-authorization-uri: https://oauth:9977/oauth-server/oauth/authorize
+      resource:
+        user-info-uri: http://localhost:8080/me
+
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      #base-path: /
+      exposure:
+        include: '*'
+test:
+  url: http://uol.com.br
+
+host:
+  full:
+    dns:
+      auth:
+        link: https://oauth:8899/oauth-server/oauth/authorize
+
+app:
+  client:
+    id: akumos
+    secret: secret
+auth:
+  server:
+    schem: https
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://registry:8761/eureka}
+  instance:
+    prefer-ip-address: true
+    leaseRenewalIntervalInSeconds: 10
+    leaseExpirationDurationInSeconds: 30
+
+ribbon:
+  ReadTimeout: 20000
+  ConnectTimeout: 20000
+  eureka:
+    enabled: true

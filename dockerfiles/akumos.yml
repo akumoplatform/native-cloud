@@ -24,17 +24,5 @@ services:
     depends_on:
       - "config"
       - "registry"
-  ocr:
-    image: akumo/ocr:latest
-    build: ../ocr
-    ports:
-      - "9898:9898"
-    container_name: ocrservice
-    depends_on:
-      - "config"
-      - "registry"
-      - "gateway"
-    volumes:
-      - "/private/var/log/akumos:/var/log/akumos"
 
 

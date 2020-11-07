@@ -1,0 +1,46 @@
+server:
+  contextPath: /admin
+  port: 7979
+spring:
+  application:
+    name: admin
+  devtools:
+    add-properties: false
+#  data:
+#    mongodb:
+#      authentication-database:
+#      database: akumos-admin
+#      host: localhost
+#      port: 27017
+#      repositories:
+#        enabled: true
+
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      #base-path: /
+      exposure:
+        include: '*'
+
+host:
+  full:
+    dns:
+      auth:
+        link: https://localhost:8899/oauth-server/oauth/authorize
+logging:
+  level:
+    org:
+      springframework:
+        web:
+          servlet:
+            DispatcherServlet: DEBUG
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    prefer-ip-address: true
+    leaseRenewalIntervalInSeconds: 10
+    leaseExpirationDurationInSeconds: 30

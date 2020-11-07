@@ -1,0 +1,2 @@
+{"urls": [{"name": "info", "description": "info about application", "url": "/info", "urls": []}]}
+{"urls": [{"name": "beans", "description": "returns all available beans in our BeanFactory", "url": "/beans", "urls": []}]}

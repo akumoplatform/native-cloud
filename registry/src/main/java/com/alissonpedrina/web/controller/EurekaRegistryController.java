@@ -3,22 +3,27 @@ package com.alissonpedrina.web.controller;
 import com.akumos.registry.dto.ApplicationDto;
 import com.alissonpedrina.service.EurekaService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@Controller
-@RequestMapping(path = "/eureka")
+@RestController
+@RequestMapping(path = "/admin")
 public class EurekaRegistryController {
 
     @Autowired
     private EurekaService eurekaService;
 
-    @GetMapping
-    public List<ApplicationDto> getAll() {
+    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<List<ApplicationDto>> getAll() {
+        return new ResponseEntity<>(eurekaService.getAll(), HttpStatus.OK);
 
-        return eurekaService.getAll();
     }
+
 }

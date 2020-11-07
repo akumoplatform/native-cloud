@@ -20,8 +20,8 @@ zuul:
     socket-timeout-millis: 20000
 
   routes:
-    ocr:
-      path: /ocr/**
-      serviceId: ocrservice
+    customer:
+      path: /customer/**
+      serviceId: customer
       stripPrefix: false
       sensitiveHeaders:
