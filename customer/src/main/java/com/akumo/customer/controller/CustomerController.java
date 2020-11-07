@@ -1,25 +1,25 @@
 package com.akumo.customer.controller;
 
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-@RestController("/v1")
+@RestController()
+@RequestMapping("/v1")
 public class CustomerController {
 
     @PostMapping
     public ResponseEntity<String> add(@RequestBody String body) {
-        System.out.println("adding");
-        System.out.println(body);
         return ResponseEntity.ok("mock... added Customer");
     }
 
-    @GetMapping
+    @RequestMapping(method = RequestMethod.GET)
     public ResponseEntity<String> get() {
-        System.out.println("getting");
-        return ResponseEntity.ok("mock... getting Customers\nName: Ihub");
+        return ResponseEntity.ok("mock... getting Customers: 'John'");
+    }
+
+    @RequestMapping(value = "/all", method = RequestMethod.GET)
+    public ResponseEntity<String> all() {
+        return ResponseEntity.ok("mock... getting all Customers: 'John', 'Mary', 'Lucas'");
     }
 
 }

@@ -2,10 +2,12 @@ package com.alissonpedrina.mapper;
 
 import com.akumos.registry.dto.InstanceInfoDto;
 import com.netflix.appinfo.InstanceInfo;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Component
 public class InstanceInfoMapper {
 
     private InstanceInfoMapper mapper;
@@ -15,6 +17,7 @@ public class InstanceInfoMapper {
         return instances.stream().map(instanceInfo ->
 
                 InstanceInfoDto.builder()
+                        .instanceId(instanceInfo.getInstanceId())
                         .actionType(instanceInfo.getActionType())
                         .appGroupName(instanceInfo.getAppGroupName())
                         .appName(instanceInfo.getAppName())
