@@ -1,6 +1,6 @@
 package com.alissonpedrina.mapper;
 
-import com.akumos.registry.dto.ApplicationDto;
+import com.alissonpedrina.dto.ApplicationDto;
 import com.netflix.discovery.shared.Application;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

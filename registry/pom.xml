@@ -17,13 +17,6 @@
     </properties>
 
     <dependencies>
-
-        <dependency>
-            <artifactId>commons</artifactId>
-            <groupId>com.alissonpedrina</groupId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-
         <!-- jaxb on Java 11 -->
         <dependency>
             <groupId>javax.xml.bind</groupId>

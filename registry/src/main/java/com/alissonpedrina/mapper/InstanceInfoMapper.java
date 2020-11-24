@@ -1,6 +1,6 @@
 package com.alissonpedrina.mapper;
 
-import com.akumos.registry.dto.InstanceInfoDto;
+import com.alissonpedrina.dto.InstanceInfoDto;
 import com.netflix.appinfo.InstanceInfo;
 import org.springframework.stereotype.Component;
 

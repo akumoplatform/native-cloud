@@ -1,6 +1,6 @@
 package com.alissonpedrina.service;
 
-import com.akumos.registry.dto.ApplicationDto;
+import com.alissonpedrina.dto.ApplicationDto;
 import com.alissonpedrina.mapper.ApplicationMapper;
 import com.netflix.eureka.EurekaServerContextHolder;
 import org.springframework.beans.factory.annotation.Autowired;

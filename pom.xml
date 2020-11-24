@@ -43,7 +43,6 @@
         <module>config</module>
         <module>customer</module>
         <module>monitoring</module>
-        <module>admin</module>
     </modules>
 
     <dependencies>
@@ -131,6 +130,7 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
+                    <forceJavacCompilerUse>true</forceJavacCompilerUse>
                     <source>10</source>
                     <target>10</target>
                 </configuration>

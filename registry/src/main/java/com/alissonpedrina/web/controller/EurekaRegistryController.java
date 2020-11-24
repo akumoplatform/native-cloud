@@ -1,6 +1,6 @@
 package com.alissonpedrina.web.controller;
 
-import com.akumos.registry.dto.ApplicationDto;
+import com.alissonpedrina.dto.ApplicationDto;
 import com.alissonpedrina.service.EurekaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -22,7 +22,7 @@ public class EurekaRegistryController {
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<ApplicationDto>> getAll() {
-        return new ResponseEntity<>(eurekaService.getAll(), HttpStatus.OK);
+        return new ResponseEntity<List<ApplicationDto>>(eurekaService.getAll(), HttpStatus.OK);
 
     }
 
